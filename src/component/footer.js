@@ -12,6 +12,7 @@ return (
               <li><a href="/about-us">About Us</a></li>
               <li><a href="/reviews">Reviews</a></li>
               <li><a href="/check-in">Check-In</a></li>
+              <li><a href="/check-in">Log-in</a></li>
             </ul>
           </div>
           <div className="footer-contact">

@@ -4,7 +4,7 @@ const reviewsData = [
   {
     name: "Jane Doe",
     rating: 5,
-    comment: "Amazing experience! The staff was incredibly friendly and the room was beautiful.",
+    comment: "Good service, good staff and good food",
   },
   {
     name: "John Doe",
