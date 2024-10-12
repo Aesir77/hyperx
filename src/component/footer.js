@@ -1,5 +1,5 @@
 import React from "react";
-import './styling/footer.css'
+import './styling/Hyperx.css';
 function Footer() {
 return (
 

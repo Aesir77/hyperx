@@ -1,52 +1,78 @@
 import React, { useState } from 'react';
-import "./Hyperx.css";
-import "./Check-in";
+import "./styling/Hyperx.css";
+import "./check-in";
 
 
 function Booking() {
-  
-    
-const [Guests, SetGuests] = useState(1);
-const [reservDate, SetreservDate] = useState("");
-const handleGuestChange = (change) => {
-    SetGuests((prevGuests) => Math.max(1, prevGuests + change));
-};
+    const [Guests, SetGuests] = useState(1);
+    const [reservDate, SetreservDate] = useState("");
+    const [roomtype, setroomtype] = useState("geyser"); 
+    const [payment, setpayment] = useState("");
 
+    const handleGuestChange = (change) => {
+        SetGuests((prevGuests) => Math.max(1, prevGuests + change));
+    };
+
+    
+    const getPrice = () => {
+        switch (roomtype) {
+            case "geyser":
+                return 600;
+            case "eupherium":
+                return 900;
+            case "nixilis":
+                return 1300;
+            default:
+                return 0;
+        }
+    };
 
     return (
         <div className='booking'>
-    <p> Number of Guests:  </p>
-    <button onClick={() => handleGuestChange(-1)}> - </button>
-    <span> {Guests} </span>
-    <button onClick={() => handleGuestChange(1)}> + </button>
-    
-<p> Reservation Date: </p>
+            <p> Number of Guests: </p>
+            <button onClick={() => handleGuestChange(-1)}> - </button>
+            <span> {Guests} </span>
+            <button onClick={() => handleGuestChange(1)}> + </button>
+            
+            <p> Reservation Date: </p>
 
-<input type = "date"
-        value = {reservDate} 
-        onChange={(e) => SetreservDate(e.target.value)}
-         />
-        
-    <p> Price(of Room): Energy Credits: 500  </p>
+            <p> From </p>
+            <input 
+                type="date"
+                value={reservDate}
+                onChange={(e) => SetreservDate(e.target.value)}
+            />
 
+            <p> Until</p>
+             <input 
+                type="date"
+                value={reservDate}
+                onChange={(e) => SetreservDate(e.target.value)}
+            />
+            
+            
+            <p> Price (of Room): Energy Credits: {getPrice()} </p>
 
-    <p> Type of Room: (List) </p>
-    <ul>
-<li> Geyser </li>
-<li> Eupherium </li>
-<li> Nixilis </li>
+            <p> Type of Room: </p>
+            <select value={roomtype} onChange={(e) => setroomtype(e.target.value)}>
+                <option value="geyser">Geyser (Small)</option>
+                <option value="eupherium">Eupherium (Medium)</option>
+                <option value="nixilis">Nixilis (Large)</option>
+            </select>
 
+            <p> Mode of Payment: </p>
+            <select value={payment} onChange={(e) => setpayment(e.target.value)}>
+                <option value="e-credits">Ecredits</option>
+                <option value="unity">Unity</option>
+                <option value="astral strand">Astral Strand</option>
+            </select>
+            
+            
+            <p> Total: {getPrice() * Guests} Energy Credits </p>
 
-    </ul>
-    <p> Mode of Payment: (List) </p>
-
-    <p> Total: </p>
-    <button> Submit </button>
-
-
-    </div>
+            <button> Book </button>
+        </div>
     );
 }
-
 
 export default Booking;

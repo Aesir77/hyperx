@@ -12,16 +12,9 @@ return (
 </p>
 
 
-
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
+<p> </p>
 
 
-=======
- 
->>>>>>> Stashed changes
->>>>>>> Stashed changes
     </div>
 );
 }

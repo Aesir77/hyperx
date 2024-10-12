@@ -1,0 +1,35 @@
+* {
+    font-family: 'Star Jedi', sans-serif;
+    color: #D4AF37; 
+}
+
+.checkin {
+    text-align: center;
+    padding: 2em;
+    color: #FFFFFF; 
+}
+
+.booking {
+    text-align: center;
+    padding: 2em;
+    border: 1px solid #D4AF37;
+}
+
+.login {
+    text-align: center;
+    padding: 2em;
+    border-radius: 10px; 
+}
+
+.footer {
+    color: #D4AF37; 
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #D4AF37;
+}
+
+.reviews {
+    color: white;
+    text-align: center;
+    padding: 2em;
+}

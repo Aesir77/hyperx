@@ -1,46 +1,19 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
 import React, { useState } from 'react';
-import "./Hyperx.css";
-
+import "./styling/Hyperx.css";
 
 function Checkin() {
     const [inputValue, setInputValue] = useState('');
     const [inputValue1, setInputValue1] = useState('');
-<<<<<<< Updated upstream
-=======
     const [inputValue2, setInputValue2] = useState('');
     const [inputValue3, setInputValue3] = useState('');
->>>>>>> Stashed changes
+
     const handleSubmit = (event) => {
     event.preventDefault();
     };
     return (
         <div className='checkin'>
-<<<<<<< Updated upstream
-    <p> Book Confirmation Number</p>
-    <form onSubmit={handleSubmit}>
-    <input type="text" value={inputValue} onChange={(e) =>
-    setInputValue(e.target.value)} />
 
-    </form>
-<p> Contact Number</p>
-    <form onSubmit={handleSubmit}>
-    <input type="text" value={inputValue1} onChange={(r) =>
-    setInputValue1(r.target.value)} />
-
-    </form>
-    
-    </div>
-    );
-    }
-
-export default Checkin;
-=======
-    <p> Name: </p>
+<p> Name: </p>
     <form onSubmit={handleSubmit}>
     <input type="text" value={inputValue} onChange={(e) =>
     setInputValue(e.target.value)}
@@ -80,5 +53,3 @@ export default Checkin;
     }
 
 export default Checkin;
->>>>>>> Stashed changes
->>>>>>> Stashed changes
