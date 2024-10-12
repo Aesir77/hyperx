@@ -7,7 +7,7 @@ import room3 from './Assets/flh_20180612-luxuryspace-1.jpg';
 function Home() {
   return (
     <div className="home">
-      <header className="header">
+      <header className="header" >
         <h1>Welcome to Our Hotel</h1>
         <p>Your comfort is our priority!</p>
       </header>
@@ -21,7 +21,7 @@ function Home() {
       </section>
       <section className="about">
         <h2>About Us</h2>
-        <p>
+        <p class="page-text">
           We are dedicated to providing you with the best experience during your stay. 
           Enjoy our amenities, services, and friendly staff. We look forward to welcoming you!
         </p>

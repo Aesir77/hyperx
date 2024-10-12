@@ -6,10 +6,11 @@ function LogIn() {
     const [inputValue1, setInputValue1] = useState('');
     const [inputValue2, setInputValue2] = useState('');
     const [inputValue3, setInputValue3] = useState('');
-
     const handleSubmit = (event) => {
-    event.preventDefault();
+        event.preventDefault();
+        alert('Account created! May you enjoy your flight throughout the galaxy!');
     };
+
     return (
         <div className='login'>
 
@@ -29,22 +30,23 @@ function LogIn() {
 
     <p> Password: </p>
     <form onSubmit={handleSubmit}>
-    <input type="text" value={inputValue3} onChange={(r) =>
-    setInputValue3(r.target.value)} 
-    placeholder='******'/>
+    <input type="text" value={inputValue2}
+                    onChange={(e) => setInputValue2(e.target.value)}
+                    placeholder='******'/>
     </form>
     
     <p> Confirm Password: </p>
     <form onSubmit={handleSubmit}>
-    <input type="text" value={inputValue3} onChange={(r) =>
-    setInputValue3(r.target.value)} 
-    placeholder='******'/>
+    <input type="text" value={inputValue3}
+                    onChange={(e) => setInputValue3(e.target.value)}
+                    placeholder='******'/>
     </form>
 
-    <button> Submit </button>
+    <button onClick={handleSubmit}>Submit</button>
 
-    <p> Already have an account? Book <a href = "./booking"> Now! </a> </p>
-    </div>
+            <p> Already have an account? Book <a href="./booking">Now!</a> </p>
+        </div>
+
 
    
     );

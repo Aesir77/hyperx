@@ -21,6 +21,11 @@ const reviewsData = [
     rating: 3,
     comment: "Decent stay, but I expected more from the service.",
   },
+  {
+    name: "Jaden Barana",
+    rating: 1,
+    comment: "Serve your own breakfast.",
+  },
 ];
 
 function Reviews() {
