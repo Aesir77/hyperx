@@ -16,6 +16,18 @@ function Aboutus() {
       <p>
         Join us on this incredible journey, and may the force be with you.
       </p>
+      <p>
+        As you enter our hotel. You would experience the up-to-date advanced technology the galaxies has ever known. With shields able 
+        to withstand the impact of asteroids and comets, you would not have to worry as the ship will not shake, you won't even feel being 
+        in outer space. 
+      </p>
+      <p> 
+      Experience the beautiful expanse of weather between Worlds. Delicacies from each, as well as the highest level of service and support 
+      of local tourism with security to secure your safety. Join us now as we travel across the galaxies and experience FTL travel technology 
+      and explore the vast wonders of our worlds, as the saying of being in space goes, May the force join you.
+
+
+       </p>
     </div>
   );
 }
