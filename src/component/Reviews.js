@@ -1,9 +1,41 @@
 import React from "react";
+import './styling/reviews.css'; 
+const reviewsData = [
+  {
+    name: "Jane Doe",
+    rating: 5,
+    comment: "Amazing experience! The staff was incredibly friendly and the room was beautiful.",
+  },
+  {
+    name: "John Doe",
+    rating: 4,
+    comment: "Great location and comfortable rooms. Would definitely stay here again!",
+  },
+  {
+    name: "Patrick Vidanes",
+    rating: 5,
+    comment: "The best hotel I've ever stayed at! Highly recommend the breakfast.",
+  },
+  {
+    name: "Jemanuel Lasquite",
+    rating: 3,
+    comment: "Decent stay, but I expected more from the service.",
+  },
+];
 
 function Reviews() {
   return (
     <div className="reviews">
-      <p>Review Page HAHA Skibidi</p>
+      <h1>Recent Reviews From Customers</h1>
+      <div className="reviews-list">
+        {reviewsData.map((review, index) => (
+          <div className="review" key={index}>
+            <h3>{review.name}</h3>
+            <div className="rating">{'⭐'.repeat(review.rating)}</div>
+            <p>{review.comment}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
