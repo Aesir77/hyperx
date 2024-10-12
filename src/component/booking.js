@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import "./styling/Hyperx.css";
-import "./check-in";
+import "./Check-in";
 
 
 function Booking() {
