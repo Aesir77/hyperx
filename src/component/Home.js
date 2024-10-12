@@ -1,10 +1,8 @@
 import React from "react";
 import './styling/Home.css';
-
-// Import your images
-import room1 from './Assets/1_cR0GxdchD1HtKQxQ09Z1sg.jpg'; // Ensure the file extension is correct
-import room2 from './Assets/movie-themed-hotel-rooms-v0-flos2w10a07b1.jpg'; // Ensure the file extension is correct
-import room3 from './Assets/flh_20180612-luxuryspace-1.jpg'; // Ensure the file extension is correct
+import room1 from './Assets/1_cR0GxdchD1HtKQxQ09Z1sg.jpg'; 
+import room2 from './Assets/movie-themed-hotel-rooms-v0-flos2w10a07b1.jpg'; 
+import room3 from './Assets/flh_20180612-luxuryspace-1.jpg'; 
 
 function Home() {
   return (
