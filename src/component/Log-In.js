@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 
 function LogIn() {
-    return(
-<div className="log-in">
+    // State for input fields
+    const [inputValue, setInputValue] = useState('');
+    const [inputValue1, setInputValue1] = useState('');
+    const [inputValue2, setInputValue2] = useState('');
+    const [inputValue3, setInputValue3] = useState('');
 
+    // Handle form submission
     const handleSubmit = (event) => {
         event.preventDefault();
         alert('Account created! May you enjoy your flight throughout the galaxy!');
     };
 
     return (
-        <div className='login'>
-
+        <div className="login">
             <p> Username: </p>
             <form onSubmit={handleSubmit}>
                 <input
@@ -27,7 +30,7 @@ function LogIn() {
                 <input
                     type="text"
                     value={inputValue1}
-                    onChange={(r) => setInputValue1(r.target.value)}
+                    onChange={(e) => setInputValue1(e.target.value)}
                     placeholder='name@gmail.com'
                 />
             </form>
@@ -37,7 +40,7 @@ function LogIn() {
                 <input
                     type="password"
                     value={inputValue2}
-                    onChange={(r) => setInputValue2(r.target.value)}
+                    onChange={(e) => setInputValue2(e.target.value)}
                     placeholder='******'
                 />
             </form>
@@ -47,16 +50,16 @@ function LogIn() {
                 <input
                     type="password"
                     value={inputValue3}
-                    onChange={(r) => setInputValue3(r.target.value)}
+                    onChange={(e) => setInputValue3(e.target.value)}
                     placeholder='******'
                 />
             </form>
 
-            <button onClick={handleSubmit}> Submit </button>
+            <button onClick={handleSubmit}>Submit</button>
 
             <p> Already have an account? Book <a href="./booking">Now!</a> </p>
         </div>
     );
-
+}
 
 export default LogIn;
