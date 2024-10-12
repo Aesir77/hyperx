@@ -18,3 +18,58 @@ color: green;
 
 color: green;
 }
+
+.custom-nav-link:hover{
+    transition: color 1s, ease-in;
+    text-shadow: 
+        0.5px 0.5px 0 cyan,  
+        -0.5px -0.5px 0 cyan,
+        0.5px -0.5px 0 cyan,
+        -0.5px 0.5px 0 cyan;
+        
+}
+
+.custom-nav-link:active{
+    text-shadow: 
+    0.5px 0.5px 0 red,  
+    -0.5px -0.5px 0 red,
+    0.5px -0.5px 0 red,
+    -0.5px 0.5px 0 red;
+}
+
+.custom-nav-link:focus{
+   
+    text-shadow: 
+        0.5px 0.5px 0 red,  
+        -0.5px -0.5px 0 red,
+        0.5px -0.5px 0 red,
+        -0.5px 0.5px 0 red;
+}
+
+
+* {
+    font-family: 'Horizon', sans-serif;
+    color: black; 
+    font-weight: bold; 
+    text-shadow: 
+        0.5px 0.5px 0 #ffde59,  
+        -0.5px -0.5px 0 #ffde59,
+        0.5px -0.5px 0 #ffde59,
+        -0.5px 0.5px 0 #ffde59; 
+        font-size: 20px; 
+        text-transform: uppercase
+ 
+}
+
+.m_menu {
+    /*background-image: url('component/Assets/Background.jpg');*/
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;  
+    width: 100vw; 
+  }
+
+
+
+
