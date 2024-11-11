@@ -6,12 +6,50 @@ function LogIn() {
     const [inputValue1, setInputValue1] = useState('');
     const [inputValue2, setInputValue2] = useState('');
     const [inputValue3, setInputValue3] = useState('');
+<<<<<<< Updated upstream
 
     // Handle form submission
     const handleSubmit = (event) => {
+=======
+    const [errorMessage, setErrorMessage] = useState('');
+
+
+    // Handle form submission
+    const handleSubmit = async (event) => {
+>>>>>>> Stashed changes
         event.preventDefault();
-        alert('Account created! May you enjoy your flight throughout the galaxy!');
+        if (!inputValue || !inputValue1 || !inputValue2 || !inputValue3) {
+            setErrorMessage("All fields are required.");
+            return;}
+
+        // Construct the payload to be sent to the backend
+        const payload = {
+            username: inputValue,
+            email: inputValue1,
+            password: inputValue2,
+            confirmPassword: inputValue3
+        };
+
+        try {
+            // Send a POST request to the backend
+            const response = await fetch('http://localhost:5001/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            // Handle the response from the backend
+            const data = await response.json();
+            alert(data.message);
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while creating your account.');
+        }
     };
+
 
     return (
         <div className="login">
@@ -45,6 +83,7 @@ function LogIn() {
                 />
             </form>
 
+<<<<<<< Updated upstream
             <p> Confirm Password: </p>
             <form onSubmit={handleSubmit}>
                 <input
@@ -56,10 +95,19 @@ function LogIn() {
             </form>
 
             <button onClick={handleSubmit}>Submit</button>
+=======
+    {errorMessage && <p className="error">{errorMessage}</p>}
+
+    <button onClick={handleSubmit}>Submit</button>
+>>>>>>> Stashed changes
 
             <p> Already have an account? Book <a href="./booking">Now!</a> </p>
         </div>
     );
 }
 
+<<<<<<< Updated upstream
 export default LogIn;
+=======
+export default LogIn;
+>>>>>>> Stashed changes
