@@ -1,38 +1,24 @@
 import React, { useState } from 'react';
 import "./styling/Hyperx.css";
-<<<<<<< Updated upstream
-import "./Check-in";
-=======
 import { useNavigate } from 'react-router-dom';
->>>>>>> Stashed changes
 
 
 function Booking() {
     const [Guests, SetGuests] = useState(1);
-<<<<<<< Updated upstream
-    const [reservDate, SetreservDate] = useState("");
-    const [roomtype, setroomtype] = useState("geyser"); 
-    const [payment, setpayment] = useState("");
-=======
 
     const [reservDate, SetreservDate] = useState("");
     const [untilDate, SetuntilDate] = useState("");
     const [roomtype, setroomtype] = useState("geyser"); 
     const [payment, setpayment] = useState("");
     const account = useNavigate();
->>>>>>> Stashed changes
 
     const handleGuestChange = (change) => {
         SetGuests((prevGuests) => Math.max(1, prevGuests + change));
     };
 
-<<<<<<< Updated upstream
-    
-=======
      const handleAccount = () => {
         account('/account');
      }
->>>>>>> Stashed changes
     const getPrice = () => {
         switch (roomtype) {
             case "geyser":
@@ -65,13 +51,8 @@ function Booking() {
             <p> Until</p>
              <input 
                 type="date"
-<<<<<<< Updated upstream
-                value={reservDate}
-                onChange={(e) => SetreservDate(e.target.value)}
-=======
                 value={untilDate}
                 onChange={(e) => SetuntilDate(e.target.value)}
->>>>>>> Stashed changes
             />
             
             
@@ -94,11 +75,7 @@ function Booking() {
             
             <p> Total: {getPrice() * Guests} Energy Credits </p>
 
-<<<<<<< Updated upstream
-            <button> Book </button>
-=======
             <button type='button' onClick={handleAccount}> Book </button>
->>>>>>> Stashed changes
         </div>
     );
 }

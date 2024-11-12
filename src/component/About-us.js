@@ -28,9 +28,8 @@ function Aboutus() {
 
 
        </p>
-
     </div>
-);
+  );
 }
 
 export default Aboutus;

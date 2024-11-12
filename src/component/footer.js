@@ -1,20 +1,4 @@
 import React from "react";
-<<<<<<< Updated upstream
-import './styling/Hyperx.css';
-function Footer() {
-return (
-
-<div className="footer">
-<p> Contact Number: +63997990439 </p>
-<p> Email: hyper.X@worlds.com </p>
-<p> Icons here </p>
-
-
-</div>
-);
-}
-
-=======
 import './styling/footer.css';
 function Footer() {
 return (
@@ -49,5 +33,4 @@ return (
 }
 
 
->>>>>>> Stashed changes
 export default Footer;

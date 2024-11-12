@@ -1,8 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-=======
-<<<<<<< Updated upstream
-=======
 import React from "react";
 import './styling/reviews.css'; 
 const reviewsData = [
@@ -32,14 +27,10 @@ const reviewsData = [
     comment: "Serve your own breakfast.",
   },
 ];
->>>>>>> Stashed changes
 
 function Reviews() {
   return (
     <div className="reviews">
-<<<<<<< Updated upstream
-      {/* Add your review content here */}
-=======
       <h1>Recent Reviews From Customers</h1>
       <div className="reviews-list">
         {reviewsData.map((review, index) => (
@@ -50,13 +41,9 @@ function Reviews() {
           </div>
         ))}
       </div>
->>>>>>> Stashed changes
     </div>
   );
 }
 
 export default Reviews;
-<<<<<<< Updated upstream
-=======
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+

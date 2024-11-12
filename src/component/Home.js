@@ -1,22 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-function Home() {
-return (
-<div className="Home">
-
-
-
-
-
-</div>
-);
-}
-
-export default Home;
-=======
-<<<<<<< Updated upstream
-=======
 import React from "react";
 import './styling/Home.css';
 import room1 from './Assets/1_cR0GxdchD1HtKQxQ09Z1sg.jpg'; 
@@ -50,5 +31,4 @@ function Home() {
 }
 
 export default Home;
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
