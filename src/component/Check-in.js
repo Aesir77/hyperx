@@ -4,6 +4,7 @@ import "./Hyperx.css";
 function Checkin() {
     const [inputValue, setInputValue] = useState('');
     const [inputValue1, setInputValue1] = useState('');
+    const [inputValue2, setInputValue2] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -32,7 +33,18 @@ function Checkin() {
                 />
             </form>
 
-            <button type="submit" onClick={handleSubmit}>Submit</button>
+            <p>Email: </p>
+            <form onSubmit={handleSubmit}>
+            <input 
+                type='text'
+                value={inputValue2}
+                onChange={(e) => setInputValue2(e.target.values)}
+                placeholder='name@gmail.com'
+                >    
+                </input>
+            </form>
+
+            <button type="submit" onClick={handleSubmit}> Check-In </button>
 
             <p>Not booked yet? Click <a href="./booking">Here</a> to book your flight!</p>
         </div>

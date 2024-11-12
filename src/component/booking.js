@@ -1,19 +1,24 @@
 import React, { useState } from 'react';
 import "./styling/Hyperx.css";
-import "./Check-in";
+import { useNavigate } from 'react-router-dom';
 
 
 function Booking() {
     const [Guests, SetGuests] = useState(1);
+
     const [reservDate, SetreservDate] = useState("");
+    const [untilDate, SetuntilDate] = useState("");
     const [roomtype, setroomtype] = useState("geyser"); 
     const [payment, setpayment] = useState("");
+    const account = useNavigate();
 
     const handleGuestChange = (change) => {
         SetGuests((prevGuests) => Math.max(1, prevGuests + change));
     };
 
-    
+     const handleAccount = () => {
+        account('/account');
+     }
     const getPrice = () => {
         switch (roomtype) {
             case "geyser":
@@ -46,8 +51,8 @@ function Booking() {
             <p> Until</p>
              <input 
                 type="date"
-                value={reservDate}
-                onChange={(e) => SetreservDate(e.target.value)}
+                value={untilDate}
+                onChange={(e) => SetuntilDate(e.target.value)}
             />
             
             
@@ -70,7 +75,7 @@ function Booking() {
             
             <p> Total: {getPrice() * Guests} Energy Credits </p>
 
-            <button> Book </button>
+            <button type='button' onClick={handleAccount}> Book </button>
         </div>
     );
 }

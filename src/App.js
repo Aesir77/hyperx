@@ -10,6 +10,7 @@ import Reviews from './component/Reviews.js';
 import Checkin from './component/Check-in.js';
 import Footer from './component/footer.js';
 import Booking from './component/booking.js';
+import Account from "./component/account.js";
 import './custom.css';
 
 function App() {
@@ -24,6 +25,8 @@ function App() {
           <Route path="reviews" element={<Reviews />} />
           <Route path="check-in" element={<Checkin />} />
           <Route path="booking" element={<Booking />} />
+          <Route path ="account" element={<Account />} />
+
         </Routes>
       </Router>
       <Footer />
