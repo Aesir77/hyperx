@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .bg-color {
     background: #1c2020;
     color: white;
@@ -18,6 +19,26 @@
 
 .custom-nav-link:hover {
     transition: color 1s ease-in;
+=======
+/* Background and Text Colors */
+.bg-color {
+    background: #1c2020;
+    color: white;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Navigation Links */
+.custom-nav-link {
+    color: white;
+    font-family: 'Horizon', sans-serif;
+    text-decoration: none;
+    transition: color 0.5s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.custom-nav-link:hover {
+    color: #FFD700; 
+>>>>>>> Stashed changes
     text-shadow: 
         0.5px 0.5px 0 cyan,  
         -0.5px -0.5px 0 cyan,
@@ -25,7 +46,12 @@
         -0.5px 0.5px 0 cyan;
 }
 
+<<<<<<< Updated upstream
 .custom-nav-link:active {
+=======
+.custom-nav-link:active, .custom-nav-link:focus {
+    color: #32CD32;
+>>>>>>> Stashed changes
     text-shadow: 
         0.5px 0.5px 0 red,  
         -0.5px -0.5px 0 red,
@@ -33,6 +59,7 @@
         -0.5px 0.5px 0 red;
 }
 
+<<<<<<< Updated upstream
 .custom-nav-link:focus {
     text-shadow: 
         0.5px 0.5px 0 red,  
@@ -53,5 +80,326 @@
 
 
 
+=======
+/* Button Styling */
+button {
+    background-color: #000000;
+    color: #D4AF37; 
+    border: 2px solid #FFD700; 
+    border-radius: 8px; 
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+button:hover {
+    background-color: #FFD700;
+    color: #000000; 
+    transform: scale(1.1); 
+}
+
+button:active {
+    background-color: #32CD32; 
+    color: white;
+    transform: scale(0.95); 
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px cyan, 0 0 20px 5px cyan;
+}
+
+/* Input Fields */
+input[type="text"], input[type="date"] {
+    background-color: #18191A; 
+    color: #FFD700; 
+    border: 2px solid #FFD700; 
+    padding: 8px 16px;
+    border-radius: 8px;
+    margin: 10px 0;
+    transition: border-color 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: cyan; 
+    outline: none;
+}
+
+/* Select Fields */
+select {
+    background-color: #18191A;
+    color: #FFD700;
+    border: 2px solid #FFD700;
+    padding: 10px;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+select:focus {
+    border-color: cyan;
+    outline: none;
+}
+
+/* Menu Styling */
+.m_menu {
+    background-image: url('component/Assets/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    min-height: 100vh;
+    animation: seamlessBackground 20s linear infinite; 
+}
+
+/* Specific usage in HTML */
+.page-title, .page-text {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    width: 100%; 
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.page-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.page-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Paragraph Styling */
+p {
+    font-family: 'Horizon', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #FFD700; 
+    margin: 10px 0;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #FFD700; } 
+}
+
+@keyframes backgroundMove {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+}
+
+
+/* Home Section */
+.home {
+    text-align: center;
+    color: white;
+    padding: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.header {
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 18px;
+}
+
+/* Gallery Section */
+.gallery {
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gallery h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.image-container img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* About Section */
+.about {
+    padding: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+.footer {
+    background-color: #1c2020;
+    color: #FFD700;
+    padding: 20px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.footer-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: cyan;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #FFD700;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: cyan;
+    transform: scale(1.3); 
+}
+
+/* About Us Section */
+.about-us {
+    color: white;
+    padding: 50px;
+    text-align: left;
+    background-color: #292b2c;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.about-us h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-us p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Reviews Section */
+.reviews {
+    text-align: center;
+    color: white;
+    padding: 50px;
+    min-height: 100vh; /* Ensures full viewport height */
+    background-repeat: repeat; /* Background image repeats as needed */
+}
+
+
+.reviews h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.review {
+    background-color: #1c2020;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.review h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid;
+    width: 100%;
+    animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+.rating {
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.review p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+>>>>>>> Stashed changes
 
 

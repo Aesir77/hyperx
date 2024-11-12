@@ -1,0 +1,24 @@
+.about-us {
+    padding: 40px;
+    font-family: Arial, sans-serif; 
+    text-align: center; 
+    background-color: #000000; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .about-us h1 {
+    font-size: 2.5em; 
+    color: #D4AF37; 
+    margin-bottom: 20px;
+  }
+  
+  .about-us p {
+    font-size: 1.1em;
+    line-height: 1.6; 
+    margin: 15px 0; 
+    color: #D4AF37;
+  }
+  
