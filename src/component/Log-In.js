@@ -6,59 +6,101 @@ function LogIn() {
     const [inputValue1, setInputValue1] = useState('');
     const [inputValue2, setInputValue2] = useState('');
     const [inputValue3, setInputValue3] = useState('');
-    const [showPas, setshowPas] = useState(false);
-    const [showPas1, setshowPas1] = useState(false);
+    const [showPas, setShowPas] = useState(false);
+    const [showPas1, setShowPas1] = useState(false);
+    const [errorMessage, setErrorMessage] = useState('');
 
-    const handleSubmit = (event) => {
+    // Handle form submission
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        alert('Account created! May you enjoy your hyperdrive throughout the galaxy!');
+        if (!inputValue || !inputValue1 || !inputValue2 || !inputValue3) {
+            setErrorMessage("All fields are required.");
+            return;
+        }
+
+        // Construct the payload to be sent to the backend
+        const payload = {
+            username: inputValue,
+            email: inputValue1,
+            password: inputValue2,
+            confirmPassword: inputValue3
+        };
+
+        try {
+            // Send a POST request to the backend
+            const response = await fetch('http://localhost:5001/register', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            });
+
+            // Handle the response from the backend
+            const data = await response.json();
+            alert(data.message);
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert('An error occurred while creating your account.');
+        }
     };
 
     const togglePass = () => {
-        setshowPas(!showPas);
-    }
+        setShowPas(!showPas);
+    };
+
     const togglePass1 = () => {
-        setshowPas1(!showPas1);
-    }
+        setShowPas1(!showPas1);
+    };
 
     return (
-        <div className='login'>
+        <div className="login">
+            {errorMessage && <p className="error">{errorMessage}</p>}
+            
+            <form onSubmit={handleSubmit}>
+                <p>Username:</p>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={(e) => setInputValue(e.target.value)}
+                    placeholder="Maranon Joachim"
+                />
 
-<p> Username: </p>
-    <form onSubmit={handleSubmit}>
-    <input type="text" value={inputValue} onChange={(e) =>
-    setInputValue(e.target.value)}
-    placeholder='Kimmy1' />
+                <p>Email:</p>
+                <input
+                    type="text"
+                    value={inputValue1}
+                    onChange={(e) => setInputValue1(e.target.value)}
+                    placeholder="name@gmail.com"
+                />
 
-    </form>
-<p> Email: </p>
-    <form onSubmit={handleSubmit}>
-    <input type="text" value={inputValue1} onChange={(e) =>
-    setInputValue1(e.target.value)}
-    placeholder='name@gmail.com' />
-    </form>
-
-    <p> Password: </p>
-    <form onSubmit={handleSubmit}>
-    <input type= {showPas ? "text" : "password"} value={inputValue2}
+                <p>Password:</p>
+                <input
+                    type={showPas ? "text" : "password"}
+                    value={inputValue2}
                     onChange={(e) => setInputValue2(e.target.value)}
-                    placeholder='******'/>
+                    placeholder="******"
+                />
+                <button type="button" onClick={togglePass}>
+                    {showPas ? "Hide" : "Show"}
+                </button>
 
-                    <button type = "button" onClick={togglePass}> {showPas ? "Hide" : "Show"} </button>
-    </form>
-    
-    <p> Confirm Password: </p>
-    <form onSubmit={handleSubmit}>
-    <input type={showPas1 ? "text" : "password"} value={inputValue3}
+                <p>Confirm Password:</p>
+                <input
+                    type={showPas1 ? "text" : "password"}
+                    value={inputValue3}
                     onChange={(e) => setInputValue3(e.target.value)}
-                    placeholder='******'/>
+                    placeholder="******"
+                />
+                <button type="button" onClick={togglePass1}>
+                    {showPas1 ? "Hide" : "Show"}
+                </button>
 
-<button type = "button" onClick={togglePass1}> {showPas1 ? "Hide" : "Show"} </button>
-    </form>
+                <button type="submit">Register</button>
+            </form>
 
-    <button onClick={handleSubmit}> Register </button>
-
-            <p> Already have an account? Book <a href="./booking">Now!</a> </p>
+            <p>Already have an account? Book <a href="./booking">Now!</a></p>
         </div>
     );
 }
@@ -67,5 +109,3 @@ function LogIn() {
 export default LogIn;
 =======
 export default LogIn;
-
-
