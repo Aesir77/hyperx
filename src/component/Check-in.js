@@ -53,11 +53,17 @@ function Checkin() {
         />
       </form>
 
+<<<<<<< Updated upstream
       <button type="submit">Submit</button>
 
       <p>Not booked yet? Click <a href="./booking">Here</a></p>
     </div>
   );
+=======
+            <p>Not booked yet? Click <a href="./booking">Here</a> to book your room!</p>
+        </div>
+    );
+>>>>>>> Stashed changes
 }
 
 export default Checkin;
