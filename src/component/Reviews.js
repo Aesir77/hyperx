@@ -1,20 +1,3 @@
-<<<<<<< Updated upstream
-import React from "react";
-
-function Reviews() {
-    return(
-<div className="reviews">
-
-
-
-
-
-</div>
-    );
-}
-
-export default Reviews;
-=======
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './styling/reviews.css';
@@ -54,4 +37,3 @@ function Reviews() {
 }
 
 export default Reviews;
->>>>>>> Stashed changes
