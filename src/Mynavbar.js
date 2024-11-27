@@ -17,6 +17,7 @@ function BasicExample() {
             <Nav.Link as={Link} to="/log-in" className="custom-nav-link">Log In</Nav.Link>
             <Nav.Link as={Link} to="/reviews" className="custom-nav-link">Reviews</Nav.Link>
             <Nav.Link as={Link} to="/check-in" className="custom-nav-link">Check In</Nav.Link>
+            <Nav.Link as={Link} to="/add-review" className="custom-nav-link add-review-btn">Add Review</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
