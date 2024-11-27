@@ -17,8 +17,8 @@ return (
           </div>
           <div className="footer-contact">
             <h3>Contact Us</h3>
-            <p>Email: info@ourhotel.com</p>
-            <p>Phone: +1 (234) 567-890</p>
+            <p>Email: hyperxhotels@gmail.com</p>
+            <p>Phone: 1-700-800-900</p>
           </div>
           <div className="footer-social">
             <h3>Follow Us</h3>

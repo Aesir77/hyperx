@@ -76,7 +76,7 @@ function Checkin() {
                 <button type="submit"> Check-In </button>
             </form>
 
-            <p>Not booked yet? Click <a href="./booking">Here</a> to book your flight!</p>
+            <p>Not booked yet? Click <a href="./booking">Here</a> to book your rooms!</p>
         </div>
     );
 }

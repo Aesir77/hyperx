@@ -228,9 +228,12 @@ p {
 
 /* Footer Section */
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background-color: #1c2020;
     color: #FFD700;
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -238,7 +241,7 @@ p {
 .footer-content {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: 1;
     padding-bottom: 20px;
     animation: fadeIn 1.5s ease-in-out;
 }
