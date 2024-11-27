@@ -226,9 +226,7 @@ p {
     margin-bottom: 10px;
 }
 
-/* Footer Section */
 .footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #1c2020;
@@ -241,7 +239,7 @@ p {
 .footer-content {
     display: flex;
     justify-content: space-around;
-    flex-wrap: 1;
+    flex-wrap: wrap;
     padding-bottom: 20px;
     animation: fadeIn 1.5s ease-in-out;
 }
@@ -306,8 +304,8 @@ p {
     text-align: center;
     color: white;
     padding: 50px;
-    min-height: 100vh; /* Ensures full viewport height */
-    background-repeat: repeat; /* Background image repeats as needed */
+    min-height: 100vh; 
+    background-repeat: repeat;
 }
 
 
