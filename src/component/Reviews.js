@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 import React from "react";
 import './styling/reviews.css'; 
 const reviewsData = [
@@ -47,3 +52,7 @@ function Reviews() {
 
 export default Reviews;
 
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
