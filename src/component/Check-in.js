@@ -1,3 +1,8 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
 import React, { useState } from 'react';
 import "./Hyperx.css";
 
@@ -52,3 +57,7 @@ function Checkin() {
 }
 
 export default Checkin;
+<<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

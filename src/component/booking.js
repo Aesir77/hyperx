@@ -5,20 +5,36 @@ import { useNavigate } from 'react-router-dom';
 
 function Booking() {
     const [Guests, SetGuests] = useState(1);
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     const [reservDate, SetreservDate] = useState("");
     const [untilDate, SetuntilDate] = useState("");
     const [roomtype, setroomtype] = useState("geyser"); 
     const [payment, setpayment] = useState("");
     const account = useNavigate();
+<<<<<<< Updated upstream
+=======
+    const [inputValue, setInputValue] = useState('');
+    const [inputValue1, setInputValue1] = useState('');
+>>>>>>> Stashed changes
 
     const handleGuestChange = (change) => {
         SetGuests((prevGuests) => Math.max(1, prevGuests + change));
     };
 
+<<<<<<< Updated upstream
      const handleAccount = () => {
         account('/account');
      }
+=======
+
+     const handleSubmit = (event) => {
+        event.preventDefault();
+      
+    };
+>>>>>>> Stashed changes
     const getPrice = () => {
         switch (roomtype) {
             case "geyser":
@@ -34,6 +50,24 @@ function Booking() {
 
     return (
         <div className='booking'>
+<<<<<<< Updated upstream
+=======
+<p> Username: </p>
+<form onSubmit={handleSubmit}>
+    <input type="text" value={inputValue} onChange={(e) =>
+    setInputValue(e.target.value)}
+    placeholder='Kimmy1' />
+
+    </form>
+<p> Password: </p>
+    <form onSubmit={handleSubmit}>
+    <input type="text" value={inputValue1} onChange={(r) =>
+    setInputValue1(r.target.value)}
+    placeholder='******' />
+
+    </form>
+
+>>>>>>> Stashed changes
             <p> Number of Guests: </p>
             <button onClick={() => handleGuestChange(-1)}> - </button>
             <span> {Guests} </span>
@@ -75,7 +109,17 @@ function Booking() {
             
             <p> Total: {getPrice() * Guests} Energy Credits </p>
 
+<<<<<<< Updated upstream
             <button type='button' onClick={handleAccount}> Book </button>
+=======
+            <p> Username: </p>
+  
+
+
+            <button type='button' onClick={handleSubmit}> Book </button>
+
+            
+>>>>>>> Stashed changes
         </div>
     );
 }
