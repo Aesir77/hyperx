@@ -64,7 +64,7 @@ button:focus {
 }
 
 /* Input Fields */
-input[type="text"], input[type="date"] {
+input[type="text"], input[type="date"], input[type="password"] {
     background-color: #18191A; 
     color: #FFD700; 
     border: 2px solid #FFD700; 
@@ -72,10 +72,9 @@ input[type="text"], input[type="date"] {
     border-radius: 8px;
     margin: 10px 0;
     transition: border-color 0.3s ease;
-    animation: fadeIn 1.5s ease-in-out;
 }
 
-input[type="text"]:focus, input[type="date"]:focus {
+input[type="text"]:focus, input[type="date"]:focus, input[type="password"]:focus {
     border-color: cyan; 
     outline: none;
 }
