@@ -6,11 +6,8 @@ import "./Hyperx.css";
 function Checkin() {
     const [inputValue, setInputValue] = useState('');
     const [inputValue1, setInputValue1] = useState('');
-<<<<<<< Updated upstream
-=======
     const [inputValue2, setInputValue2] = useState('');
     const [confirmationNumber, setConfirmationNumber] = useState('');
->>>>>>> Stashed changes
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -66,9 +63,6 @@ function Checkin() {
                     />
                 </div>
 
-<<<<<<< Updated upstream
-            <button type="submit" onClick={handleSubmit}>Submit</button>
-=======
                 <div>
                     <label htmlFor="email">Email: </label>
                     <input 
@@ -82,7 +76,6 @@ function Checkin() {
 
                 <button type="submit"> Check-In </button>
             </form>
->>>>>>> Stashed changes
 
             <p>Not booked yet? Click <a href="./booking">Here</a> to book your flight!</p>
         </div>

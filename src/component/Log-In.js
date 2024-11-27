@@ -104,8 +104,4 @@ function LogIn() {
         </div>
     );
 }
-
-<<<<<<< Updated upstream
-export default LogIn;
-=======
 export default LogIn;
