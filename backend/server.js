@@ -19,10 +19,8 @@ const userSchema = new mongoose.Schema({
     password: { type: String, required: true },
 });
 const User = mongoose.model('users', userSchema);
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
+
 // Endpoint to handle user registration
 app.post('/register', async (req, res) => {
     console.log(req.body); // Log incoming request body
@@ -47,8 +45,6 @@ app.post('/register', async (req, res) => {
         res.status(500).json({ message: 'Error creating account', error });
     }
 });
-<<<<<<< Updated upstream
-=======
 
 // Endpoint to validate user credentials for login
 app.post('/validateUser', async (req, res) => {
@@ -92,6 +88,5 @@ app.post('/check-email', async (req, res) => {
 
 
 // Start the server
->>>>>>> Stashed changes
 const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
